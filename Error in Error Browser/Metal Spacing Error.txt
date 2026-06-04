@@ -1,0 +1,15 @@
+Technical Report: Power Grid DRC Violations within Hardened SRAM IP
+Issue Overview
+During the physical verification stage of the layout, specifically while executing the Power Grid Design Rule Check (check_pg_drc), the tool reported exactly 3,696 metal spacing errors. As shown in the layout visualizations, these yellow DRC error markers are distinctly isolated to the internal structures and peripheral boundaries of the hardened SRAM macros (e.g., sub_chip1/MemXHier/MemXa).
+
+Root Cause Analysis
+The routing and placement of the top-level standard cells, core logic, and the custom power grid (utilizing Metal 10 and Metal 11) are completely clean. The reported spacing violations originate exclusively from the internal metal layers of the memory macros provided by the SAED 32nm student library.
+
+Because this is an academic Process Design Kit (PDK) rather than a production-ready foundry PDK, the memory compilers used to generate these SRAM blocks often produce layouts with internal geometries that conflict with the overarching technology design rules. The errors typically manifest as minimum spacing violations between internal bitline/wordline routes or power ring geometries inside the macro.
+
+Resolution & Industry Practice (Waivers)
+In the ASIC physical design flow, hardened IP blocks (like SRAMs, PLLs, or standard cells) are treated as "black boxes" (LEF/FRAM views) by the placement and routing tools. A physical designer only has control over the routing up to the pins of the macro.
+
+Because it is impossible to edit the internal layout of a provided macro at the top level of the design, these specific violations cannot be rectified by the user. In standard industry practice, when a foundry or third-party IP vendor provides a macro that flags internal DRCs, the IP provider is consulted. If the IP is guaranteed to yield, these specific errors are officially waived during the final signoff phase.
+
+For the scope of this project, these 3,696 library-dependent errors are documented and waived, confirming that the user-defined routing, placement, and power planning remain 100% DRC clean.
