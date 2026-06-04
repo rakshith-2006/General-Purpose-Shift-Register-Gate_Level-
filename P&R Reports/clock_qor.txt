@@ -1,0 +1,39 @@
+ Info: Initializing timer in CLOCK_SYN_REPORT_MODE
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Information: The RC mode used is DR for design 'gprs_top'. (NEX-022)
+Extracting design: route_finalized_STARRC 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 30158 nets are successfully extracted. (NEX-028)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+****************************************
+Report : clock qor
+        -type summary
+Design : gprs_top
+Version: U-2022.12-SP6
+Date   : Thu Jun  4 13:34:57 2026
+****************************************
+
+Attributes
+===========
+M Master Clock
+G Generated Clock
+& Internal Generated Clock
+U User Defined Skew Group
+D Default Skew Group
+* Generated Clock Balanced Separately
+
+==============================================
+==== Summary Reporting for Corner default ====
+==============================================
+
+=========================================================== Summary Table for Corner default ===========================================================
+Clock /                               Attrs     Sinks Levels    Clock     Clock     Clock       Max    Global  Trans DRC  Cap DRC      Wire
+Skew Group                                                   Repeater  Repeater   Stdcell   Latency      Skew     Count     Count    Length
+                                                                Count      Area      Area
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+### Mode: default, Scenario: default
+mclk                                    M,D      2856     13       61    401.04    433.57      0.60      0.08         0         0  21268.40
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+All Clocks                                       2856     13       61    401.04    433.57      0.60      0.08         0         0  21268.40
+
+1

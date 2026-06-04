@@ -1,0 +1,15 @@
+****************************************
+Report : congestion
+Design : gprs_top
+Version: U-2022.12-SP6
+Date   : Thu Jun  4 13:24:43 2026
+****************************************
+
+Layer     |    overflow     |              # GRCs has
+Name      |  total  |  max  | overflow (%)      | max overflow
+---------------------------------------------------------------
+Both Dirs |   26292 |    15 |   18240  ( 6.30%) |       1
+H routing |   19930 |     5 |   15019  (10.37%) |      13
+V routing |    6362 |    15 |    3221  ( 2.22%) |       1
+
+1

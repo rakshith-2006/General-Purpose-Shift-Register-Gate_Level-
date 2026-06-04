@@ -1,0 +1,64 @@
+Information: Timer using 1 threads
+Information: RDE mode is turned on. (TIM-124)
+Warning: Corner default:  5 process number, 5 process label, 5 voltage, and 5 temperature mismatches. (PVT-030)
+Warning: 26650 cells affected for early, 26650 for late. (PVT-031)
+Warning: 36 port driving_cells affected for early, 36 for late. (PVT-034)
+Information: The stitching and editing of coupling caps is turned OFF for design 'gprs_top.nlib:route_finalized_STARRC.design'. (TIM-125)
+Information: Design route_finalized_STARRC has 30160 nets, 0 global routed, 30158 detail routed. (NEX-024)
+Information: The RC mode used is DR for design 'gprs_top'. (NEX-022)
+---extraction options---
+Corner: default
+ late_cap_scale                : 1
+ late_res_scale                : 1
+ late_rde_cap_scale            : 1
+ late_rde_res_scale            : 1
+ early_cap_scale               : 1
+ early_res_scale               : 1
+ early_rde_cap_scale           : 1
+ early_rde_res_scale           : 1
+Global options:
+ reference_direction       : use_from_tluplus
+ real_metalfill_extraction : none
+ virtual_shield_extraction : true
+---app options---
+ host.max_cores                   : 1
+ extract.connect_open           : true
+ extract.enable_coupling_cap    : false
+Extracting design: route_finalized_STARRC 
+Information: coupling capacitance is lumped to ground. (NEX-030)
+Information: 30158 nets are successfully extracted. (NEX-028)
+Warning: Advanced receiver model has not been enabled for detailed routed design. (TIM-204)
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 30158, routed nets = 30158, across physical hierarchy nets = 0, parasitics cached nets = 30158, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 103. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+ML Acceleration:                           off
+************************************************************
+****************************************
+Report : global timing
+        -format { narrow }
+Design : gprs_top
+Version: U-2022.12-SP6
+Date   : Thu Jun  4 13:27:22 2026
+****************************************
+
+No setup violations found.
+
+
+Hold violations
+--------------------------------------------------------------
+          Total   reg->reg    in->reg   reg->out    in->out
+--------------------------------------------------------------
+WNS       -0.00      -0.00       0.00       0.00       0.00
+TNS       -0.01      -0.01       0.00       0.00       0.00
+NUM           5          5          0          0          0
+--------------------------------------------------------------
+
+1

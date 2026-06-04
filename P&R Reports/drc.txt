@@ -1,0 +1,9 @@
+Command check_pg_drc started  at Thu Jun  4 13:25:54 2026
+Command check_pg_drc finished at Thu Jun  4 13:26:06 2026
+CPU usage for check_pg_drc: 11.54 seconds ( 0.00 hours)
+Elapsed time for check_pg_drc: 11.55 seconds ( 0.00 hours)
+Total number of errors found: 3696
+   3696 insufficient spacings on M5
+------------
+Description of the errors can be seen in gui error set "DRC_report_by_check_pg_drc"
+------------
